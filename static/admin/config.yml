@@ -12,6 +12,21 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "property"
+    label: "Property"
+    folder: "src/pages/property"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Description", name: "desc", widget: "string"}
+      - {label: "Message sent", name: "msgsent", widget: "datetime"}
+      - {label: "Visited", name: "visited", widget: "datetime"}
+      - {label: "Agency", name: "agency", widget: "string"}
+      - {label: "Notes", name: "notes", widget: "markdown"}
+      - {label: "Main Image", name: "image", widget: image}
+      - {label: "Tags", name: "tags", widget: "list"}
+
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
